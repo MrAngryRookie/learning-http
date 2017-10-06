@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>cors</title>
+</head>
+<body>
+  <div>5566</div>
+  <script type="text/javascript">
+    var fetch = window.fetch
+    var myRequest = new Request('http://127.0.0.1:3344/api', {
+      method: 'GET',
+    })
+    fetch(myRequest).then(function(res) {
+      res.json().then(function(data) {
+        console.log(66, data)
+      })
+    }).catch(function(e) {
+      console.log('e', e)
+    }) 
+  </script>
+</body>
+</html>
