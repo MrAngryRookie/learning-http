@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>cors</title>
+</head>
+<body>
+  <div>5566</div>
+  <script type="text/javascript">
+    var fetch = window.fetch
+    var myRequest = new Request('/api', {
+      headers: {
+        'Cache-Control': 'max-age=0'
+      }
+    })
+    fetch(myRequest).then(function(res) {
+      res.json().then(function(data) {
+        console.log(666, data)
+      })
+    }).catch(function(e) {
+      console.log('e', e)
+    }) 
+  </script>
+</body>
+</html>
